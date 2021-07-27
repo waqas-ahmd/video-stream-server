@@ -4,6 +4,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const webrtc = require("wrtc");
 
+const PORT = process.env.PORT || 5001
+
 let senderStream = {};
 
 // app.use(express.static('public'));
@@ -74,4 +76,4 @@ function handleTrackEvent(e, peer, id) {
   senderStream[id] = e.streams[0];
 }
 
-app.listen(5001, () => console.log("server started"));
+app.listen(PORT, () => console.log("server started"));
