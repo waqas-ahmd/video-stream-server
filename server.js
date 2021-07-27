@@ -22,6 +22,11 @@ const uid = (l) => {
 };
 
 app.use(cors());
+
+app.get("/", async ({ body }, res) => {
+  res.send("Video Streaming Server");
+});
+
 app.post("/consumer", async ({ body }, res) => {
   const peer = new webrtc.RTCPeerConnection({
     iceServers: [
