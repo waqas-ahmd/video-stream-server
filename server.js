@@ -30,6 +30,7 @@ app.get("/", async ({ body }, res) => {
 });
 
 app.post("/consumer", async ({ body }, res) => {
+  console.log(senderStream)
   const peer = new webrtc.RTCPeerConnection({
     iceServers: [
       {
