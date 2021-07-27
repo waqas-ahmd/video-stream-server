@@ -26,7 +26,7 @@ const uid = (l) => {
 app.use(cors());
 
 app.get("/", async ({ body }, res) => {
-  res.json({welcome: "Video Streaming Server"});
+  res.send("<h2>Welcome to Video Streaming Server</h2>");
 });
 
 app.post("/consumer", async ({ body }, res) => {
